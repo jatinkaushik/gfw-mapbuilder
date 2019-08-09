@@ -62,6 +62,7 @@ export default {
 			"zh": "选择要考察减少量数据的范围和森林覆盖密度，然后点击“运行分析”按钮查看结果。目前仅有 2000 – 2012 年的增加量数据，增加分析始终反映这 12 年的完整情况。",
 			"ka": "შეარჩიეთ საზღვრები და ხის ვარჯის სიხშირე კარგვის მონაცემებისთვის, შემდეგ დააჭირეთ ღილაკს ანალიზის ჩატარება შედეგების სანახავად. მატების მონაცემები ამჟამად ხელმისაწვდომია 2000-2012 წლებისთვის და მატების ანალიზი ყოველთვის ასახავს სრულ 12-წლიან დროის პერიოდს."
 		},
+		"chartType": "badge",
 		"useGfwWidget": true,
 		"widgetId": "95c2c559-ca78-4b7a-b18b-7b2bca14ce83",
 		"uiParams": [{
@@ -125,6 +126,7 @@ export default {
 			"zh": "选择范围和森林覆盖密度，然后点击“运行分析”按钮查看结果。",
 			"ka": "შეარჩიეთ საზღვრები და ხის ვარჯის სიხშირე, შემდეგ დააჭირეთ ღილაკს ანალიზის ჩატარება შედეგებს სანახავად."
 		},
+		"chartType": "bar",
 		"useGfwWidget": true,
 		"widgetId": "e53e541c-92cd-4b00-9aa7-2c7bb36d4697",
 		"uiParams": [{
@@ -188,6 +190,7 @@ export default {
 			"zh": "如果您选择的区域不包括原生森林，将不会提供结果。选择范围和森林覆盖密度，然后点击“运行分析”按钮查看结果。",
 			"ka": "შედეგები არ იქნება ხელმისაწვდომი, თუკი თქვენ მიერ შერჩეული ფართობი არ შეიცავს ხტლ-ს. შეარჩიეთ საზღვრები და ხის ვარჯის სიხშირე, შემდეგ დააჭირეთ ღილაკს ანალიზის ჩატარება შედეგების სანახავად."
 		},
+		"chartType": "bar",
 		"useGfwWidget": true,
 		"widgetId": "2083a1bc-440d-43fe-8b50-ff9918a37c57",
 		"params": [{
@@ -255,6 +258,7 @@ export default {
 			"zh": "自 2000 年以来的土地覆盖数据，由欧洲空间局 (ESA) 和 UCLouvain 提供。选择范围和森林覆盖密度，然后点击“运行分析”按钮查看结果。",
 			"ka": "მიწის საფარის მონაცემები 2000 წლიდან მოწოდებულია ევროპული კოსმოსური სააგენტოს (ESA) და ლუვენის კათოლიკური უნივერსიტეტის (UCLouvain) მიერ. შეარჩიეთ საზღვრები და ხის ვარჯის სიხშირე, შემდეგ დააჭირეთ ღილაკს ანალიზის ჩატარება შედეგების სანახავად."
 		},
+		"chartType": "bar",
 		"useGfwWidget": true,
 		"widgetId": "31f78466-fc0b-42f9-a7ae-bea8559740d8",
 		"params": [{
@@ -322,6 +326,7 @@ export default {
 			"zh": "排放量不包括除树木生物量（森林覆盖）损失之外的其他来源导致的碳排放量。选择范围和森林覆盖密度，然后点击“运行分析”按钮查看结果。总碳排放量 (吨 二氧化碳)",
 			"ka": "ემისიები არ შეიცავენ ნახშირის ემისიებს სხვა წყაროებიდან, გარდა ცოცხალი ბიომასის (ხის ვარჯი) კარგვის. შეარჩიეთ საზღვრები და ხის ვარჯის სიხშირე, შემდეგ დააჭირეთ ღილაკს ანალიზის ჩატარება შედეგების სანახავად."
 		},
+		"chartType": "bar",
 		"useGfwWidget": true,
 		"widgetId": "ac38fdbd-fdb1-4d8e-9109-674013fb51a2",
 		"uiParams": [{
@@ -385,12 +390,13 @@ export default {
 			"zh": "统计过去两年内每月 GLAD 森林覆盖减少预警次数，并与历史平均值比较。",
 			"ka": "Count the number of GLAD tree cover loss alerts per month over the past two years and compare to the historical average."
 		},
+		"chartType": "line",
 		"useGfwWidget": true,
 		"widgetId": "0734ba0a-3a6c-4388-aa4a-5871791b1d1f",
 		"uiParams": "none"
 	},
 	{
-		"analysisId": "GLAD_ALERTS_Badge",
+		"analysisId": "TOTAL_GLAD_ALERTS",
 		"label": {
 			"en": "Total GLAD Alerts",
 			"fr": "Total des alertes GLAD",
@@ -418,6 +424,7 @@ export default {
 			"zh": "统计在所选时间范围内出现的 GLAD 预警次数。",
 			"ka": "Count the number of GLAD tree cover loss alerts per month."
 		},
+		"chartType": "badge",
 		"useGfwWidget": true,
 		"widgetId": "16ff6282-8ceb-4055-938a-43726a62b205",
 		"uiParams": [{
