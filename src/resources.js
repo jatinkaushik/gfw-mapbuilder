@@ -44,6 +44,7 @@ export default {
       "description": {
         "en": "Note: The boundaries of large areas of interest are simplified to enhance calculation performance. Area statistics were rounded down to the nearest hundred."
       },
+      "chartType": "badge",
       "useGfwWidget": true,
       "widgetId": "cd1eda73-e276-4137-a21f-2ccea5dc4914",
       "uiParams": "none"
@@ -59,6 +60,7 @@ export default {
       "description": {
         "en": "Note: The boundaries of large areas of interest are simplified to enhance calculation performance. Area statistics were rounded down to the nearest hundred."
       },
+      "chartType": "bar",
       "useGfwWidget": true,
       "widgetId": "22aeebf0-d82c-4656-9cbe-6f1ac62c9006",
       "uiParams": "none"
@@ -74,6 +76,7 @@ export default {
       "description": {
         "en": "Note: The boundaries of large areas of interest are simplified to enhance calculation performance. Area statistics were rounded down to the nearest hundred."
       },
+      "chartType": "bar",
       "useGfwWidget": true,
       "widgetId": "83ceb30a-ce4f-44e4-a3da-442008eb8979",
       "uiParams": "none"
@@ -89,6 +92,7 @@ export default {
       "description": {
         "en": "Note: The boundaries of large areas of interest are simplified to enhance calculation performance. Area statistics were rounded down to the nearest hundred."
       },
+      "chartType": "bar",
       "useGfwWidget": true,
       "widgetId": "b5bd1739-12c6-4e12-8e6e-bba11034db57",
       "uiParams": "none"
@@ -104,6 +108,7 @@ export default {
       "description": {
         "en": "Note: The boundaries of large areas of interest are simplified to enhance calculation performance. Area statistics were rounded down to the nearest hundred."
       },
+      "chartType": "bar",
       "useGfwWidget": true,
       "widgetId": "b1460ee1-bd54-4d61-a44c-5ca80b50c5e7",
       "uiParams": "none"
@@ -119,6 +124,7 @@ export default {
       "description": {
         "en": "Note: The boundaries of large areas of interest are simplified to enhance calculation performance. Area statistics were rounded down to the nearest hundred."
       },
+      "chartType": "bar",
       "useGfwWidget": true,
       "widgetId": "1839280b-c62f-436b-824c-5bfbbb9e923b",
       "uiParams": "none"
