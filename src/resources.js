@@ -35,6 +35,7 @@ export default {
   "recentImagery": false,
   "analysisModules": [{
       "analysisId": "TC_LOSS_GAIN",
+      "chartType": "badge",
       "label": {
         "en": "Total tree cover loss/ gain",
         "fr": "Perte/gain total de la couverture arborée",
@@ -100,6 +101,7 @@ export default {
     },
     {
       "analysisId": "TC_LOSS",
+      "chartType": "bar",
       "label": {
         "en": "Annual Tree cover loss",
         "fr": "Pertes de la couverture arborée annuelles",
@@ -165,6 +167,7 @@ export default {
     },
     {
       "analysisId": "IFL",
+      "chartType": "bar",
       "label": {
         "en": "Annual tree cover loss in IFL",
         "fr": "Perte annuelle de la couverture arborée en PFI",
@@ -234,6 +237,7 @@ export default {
     },
     {
       "analysisId": "Loss_LandCover",
+      "chartType": "bar",
       "label": {
         "en": "Annual tree cover loss by land cover class",
         "fr": "Perte annuelle de la couverture arborée par catégorie de couverture terrestre",
@@ -303,6 +307,7 @@ export default {
     },
     {
       "analysisId": "BIO_LOSS",
+      "chartType": "bar",
       "label": {
         "en": "CO2 emissions from biomass loss",
         "fr": "Émissions de Co2 de la perte de biomasse",
@@ -368,6 +373,7 @@ export default {
     },
     {
       "analysisId": "VIIRS_FIRES",
+      "chartType": "badge",
       "label": {
         "en": "VIIRS Active Fires",
         "fr": "Feux actifs VIIRS",
@@ -401,6 +407,7 @@ export default {
     },
     {
       "analysisId": "LCC",
+      "chartType": "pie",
       "label": {
         "en": "Land Cover Composition",
         "fr": "Composition de la couverture terrestre",
@@ -438,6 +445,7 @@ export default {
     },
     {
       "analysisId": "Aspect",
+      "chartType": "pie",
       "label": {
         "en": "Aspect in Forested Areas",
         "ka": "ასპექტი ტყიან ზონებში"
@@ -456,6 +464,7 @@ export default {
     },
     {
       "analysisId": "Elevation",
+      "chartType": "pie",
       "label": {
         "en": "Elevation in Forested Areas",
         "ka": "სიმაღლე ტყიან ზონებში"
@@ -474,6 +483,7 @@ export default {
     },
     {
       "analysisId": "Slope",
+      "chartType": "pie",
       "label": {
         "en": "Slope in Forested Areas",
         "ka": "დაქანება ტყიან ზონებში"
@@ -492,6 +502,7 @@ export default {
     },
     {
       "analysisId": "Hazard",
+      "chartType": "pie",
       "label": {
         "en": "Forest Hazard Risk Anaylsis",
         "ka": "ტყის საფრთხის რისკის ანალიზი"
