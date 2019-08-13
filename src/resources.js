@@ -35,6 +35,7 @@ export default {
   "recentImagery": true,
   "analysisModules": [{
       "analysisId": "VEGA_RESTORATION_TOTAL_AREA",
+      "chartType": "badge",
       "label": {
         "en": "Total area with combined potential"
       },
@@ -51,6 +52,7 @@ export default {
     },
     {
       "analysisId": "VEGA_RESTORATION_LAND_COVER",
+      "chartType": "badge",
       "label": {
         "en": "Land use-land cover in areas with combined potential"
       },
@@ -67,6 +69,7 @@ export default {
     },
     {
       "analysisId": "VEGA_RESTORATION_SLOPE",
+      "chartType": "badge",
       "label": {
         "en": "Slope in areas with combined potential"
       },
@@ -83,6 +86,7 @@ export default {
     },
     {
       "analysisId": "VEGA_RESTORATION_POP_DEN",
+      "chartType": "badge",
       "label": {
         "en": "Population density in areas with combined potential"
       },
@@ -99,6 +103,7 @@ export default {
     },
     {
       "analysisId": "VEGA_RESTORATION_TREE_COVER",
+      "chartType": "badge",
       "label": {
         "en": "Tree cover in areas with combined potential"
       },
@@ -115,6 +120,7 @@ export default {
     },
     {
       "analysisId": "VEGA_RESTORATION_RAINFALL",
+      "chartType": "badge",
       "label": {
         "en": "Average annual rainfall in areas with combined potential"
       },
