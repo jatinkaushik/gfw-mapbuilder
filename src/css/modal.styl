@@ -43,13 +43,15 @@
   right 0
   top 0
   z-index 10
+  
   & svg
-    transform translate(-50%, -50%)
+    //transform translate(-50%, -50%)
     position absolute
     height 50%
     width 50%
-    left 50%
-    top 50%
+    //left 50%
+    top 60%
+    margin-left 0.25rem
 
 .mobile-show.close-icon
   height 60px
@@ -75,16 +77,18 @@
 
 //- Analysis Modal
 .analysis-modal-container .modal
+.coordinates-modal-container .modal
   overflow-y auto
   width 320px
   height 500px
-  & .analysis-instructions__separator
-    display none
+  // & .analysis-instructions__separator
+  //   display none
   & .modal-content
     max-height 100%
 
 @media (min-width: $mobileBreak)
   .analysis-modal-container
+  .coordinates-modal-container
     & .analysis-instructions__header--additional
       font-size inherit
       margin 5px 0
@@ -98,7 +102,7 @@
     padding-bottom 10px
     font-size 13px
   & .share-items
-    justify-content space-evenly
+    justify-content center
     display flex
     & svg
       transform translate(-50%, -50%)
@@ -122,11 +126,13 @@
 
 .facebook-modal
   background $facebookBlue
+  margin 0 0.5rem
   &:hover
     background darken($facebookBlue, 25%)
 
 .twitter-modal
   background $twitterBlue
+  margin 0 0.5rem
   &:hover
     background darken($twitterBlue, 25%)
 
@@ -188,11 +194,13 @@
   height 41px
   float left
   width 25px
+  background: url('https://my.gfw-mapbuilder.org/img/tree.png') no-repeat center;
 
 .forest-icon
   float right
   height 60px
   width 91px
+  background: url('https://my.gfw-mapbuilder.org/img/forest.png') no-repeat center;
 
 .slider-container
   margin 5px 10px
