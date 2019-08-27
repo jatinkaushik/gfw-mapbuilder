@@ -229,6 +229,8 @@ body
     color #96BD3D
     margin-right 0.5rem
 
+.analysis-area-selected-feature-title
+  font-size 1.25rem
 
 .popup-content
   margin 20px auto
@@ -332,6 +334,7 @@ body
 
 .vega-chart_container
   width 100%
+  max-width 60rem
   .vega-chart-separator
     border-bottom 1px solid #ccc
     height 1rem
@@ -550,8 +553,46 @@ body
 .report-table-container
   max-width 60rem
   margin 0 auto
+  
+.report-table
+  font-size 12px
+  width 90%
+  margin 1rem auto
+  .field-row:nth-child(even)
+    background-color $selectionGray
+  .field-label
+    font-weight bold
+    color #555
+    width 50%
+  .field-value
+    color #555
+    width 50%
 
-@media (max-width 550px)
+.page-break-before
+.page-break-after
+.page-break-inside
+  display none
+  
+.esriMapLayers  
+.esriMapLayers > svg
+  width 100vw
+  margin 0 auto
+  
+.map-analysis-area-container
+#map
+#map_root
+#map_container
+#map_layers
+.esriMapLayers > div
+.esriMapLayers > svg
+.esriMapContainer
+.esriMapLayers
+  max-width 70em !important
+  width 100% !important
+  margin-right auto !important
+  margin-left auto !important
+
+@media only screen and (max-width: 550px)
   .report-header__title
     display none
 
@@ -601,30 +642,38 @@ body
       &:hover
         background #eee
         text-decoration underline
-
-.report-table
-  font-size 12px
-  width 90%
-  margin 1rem auto
-  .field-row:nth-child(even)
-    background-color $selectionGray
-  .field-label
-    font-weight bold
-    color #555
-    width 50%
-  .field-value
-    color #555
-    width 50%
-
-.page-break-before
-.page-break-after
-.page-break-inside
-  display none
   
-.esriMapLayers  
-.esriMapLayers > svg
-  width 100vw
-  margin 0 auto
+  .report-header
+    background-color #555
+    box-sizing border-box
+    height $headerHeight
+    display flex
+    width 100%
+    z-index 10
+    height 5rem
+
+  .report-header__logo-container
+    padding 1rem
+    .report-header__logo
+      height 7rem
+    
+  .map-analysis-area-container
+    margin-top 10rem
+    
+  .report-header__icon-print
+    height 3rem
+    width 3rem
+    margin-right 0.5rem
+    
+  .report-header__icon-share
+    height 3rem
+    width 3rem
+    margin-left 0.5rem
+    
+  .vega-chart-menu
+    .svg-icon
+      width 2rem
+      height 2rem
 
 @media (max-width: $mobileBreak)
   .restoration-table
@@ -634,14 +683,43 @@ body
   h3
   h4
     margin 0 5px
-
+ 
 @media print
-
   html
     min-height 100%
     position relative
   body
     height 100%
+  
+  .report-header
+    background-color #555
+    box-sizing border-box
+    height 4rem
+    display flex
+    width 100%
+    z-index 10
+    left 0
+    top 0
+    .report-header__logo-container
+      padding 5px 10px 5px 20px
+      position absolute
+      top: 0.5rem
+      #logo-anchor
+        .report-header__logo
+          height 70px
+    .report-header__title-container
+      .report-header__title
+        color #fff
+        white-space nowrap
+        overflow hidden
+        font-size 1.75rem
+        height 2rem
+        margin 0 auto
+      .report-header__icon-container
+        .report-header__icon-print
+        .report-header__icon-share
+          height 3rem
+          width 3rem
     
   .map-analysis-area-container
     position absolute
@@ -650,6 +728,7 @@ body
     left 0
     right 0
     overflow hidden
+    margin-top 6rem
   
   .analysis-modules-container
       position absolute
@@ -683,18 +762,18 @@ body
     margin auto !important
     padding 0 !important
     
-  .vega-chart-bar-container
-    margin 0 !important
+  // .vega-chart-bar-container
+  //   margin 0 !important
+  //   width 500px !important
+    
+  // .vega-chart-line-container
+  //   margin 0 !important
+  //   width 500px !important
+    
+  .vega-chart-bar-container > .vega-chart > svg
     width 500px !important
     
-  .vega-chart-line-container
-    margin 0 !important
-    width 500px !important
-    
-  .vega-chart-bar-container > .vega-chart > canvas
-    width 500px !important
-    
-  .vega-chart-line-container > .vega-chart > canvas
+  .vega-chart-line-container > .vega-chart > svg
     width 500px !important
   
   .vega-chart-info
