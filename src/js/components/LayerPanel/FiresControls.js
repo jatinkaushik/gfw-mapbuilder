@@ -18,6 +18,7 @@ export default class FiresControls extends React.Component {
     const currentDate = new Date();
     const oneYearAgo = currentDate.setFullYear(currentDate.getFullYear() - 1);
     const max = new Date();
+    
 
     this.min = moment(oneYearAgo);
     this.max = moment(max);

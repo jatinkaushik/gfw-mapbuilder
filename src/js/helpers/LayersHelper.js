@@ -36,7 +36,8 @@ const LayersHelper = {
 
   updateFiresLayerDefinitions (startDate = null, endDate = null, layer, selectValue = null) {
     if (brApp.map) {
-      const firesLayer = layer.hasOwnProperty('visibleLayers') ? layer : brApp.map.getLayer(layer.id);
+      //const firesLayer = layer.hasOwnProperty('visibleLayers') ? layer : brApp.map.getLayer(layer.id);
+      const firesLayer = brApp.map.getLayer(layer.id);
       const fireID = firesLayer.id === 'VIIRS_ACTIVE_FIRES' ? 'viirs' : 'modis';
       if (selectValue) {
         if (firesLayer && firesLayer.visible) {
@@ -44,54 +45,68 @@ const LayersHelper = {
         // We are hiding and showing the layer to avoid calling the service multiple times.
 
           firesLayer.hide();
+          // brApp.map.removeLayer(layer);
+          // brApp.map.addLayer(firesLayer);
           const layaDefs = [];
           switch (selectValue) {
             case '0': //past 24 hours
               firesLayer.url = shortTermServices[`${fireID}24HR`].url;
-              firesLayer._url.path = shortTermServices[`${fireID}24HR`].url;
-              firesLayer.setVisibleLayers([shortTermServices[`${fireID}24HR`].id]);
+              //firesLayer._url.path = shortTermServices[`${fireID}24HR`].url;
+              //firesLayer.setVisibleLayers([shortTermServices[`${fireID}24HR`].id]);
+              
+              // brApp.map.removeLayer(layer);
+              // brApp.map.addLayer(firesLayer);
+              console.log('fires layer', firesLayer);
+              
               break;
             case '1': //past 48 hours
-              // firesLayer.url = shortTermServices[`${fireID}48HR`].url;
-              // firesLayer._url.path = shortTermServices[`${fireID}48HR`].url;
-              // firesLayer.setVisibleLayers([shortTermServices[`${fireID}48HR`].id]);
-              console.log(resources);
-              // debugger
+              firesLayer.url = shortTermServices[`${fireID}48HR`].url;
+              //firesLayer._url.path = shortTermServices[`${fireID}48HR`].url;
+              //firesLayer.setVisibleLayers([shortTermServices[`${fireID}48HR`].id]);
+              // brApp.map.removeLayer(layer);
+              // brApp.map.addLayer(firesLayer);
+              console.log('fires layer', firesLayer);
 
 
 
-              const options = {};
-              const layerObj = resources.layerPanel.GROUP_LCD.layers[5];
+              // const options = {};
+              // const layerObj = resources.layerPanel.GROUP_LCD.layers.filter(LCDLayer => LCDLayer.id === layer.id)[0];
+              // //const layerObj = resources.layerPanel.GROUP_LCD.layers[layer.id];
+              
+              // console.log('layer', layer);
+              // console.log('firesLayer', firesLayer);
+              // console.log('layerObj', layerObj);
 
-              // Populate the options and then add the layerObj
-              options.id = layerObj.id;
-              options.visible = layerObj.visible || false;
-              options.opacity = layerObj.opacity || 1.0;
-              //- Add a popup template if configuration is present
-              if (layerObj.popup && layerObj.layerIds) {
-                options.infoTemplates = {};
-                const template = layerUtils.makeInfoTemplate(layerObj.popup, 'en');
-                layerObj.layerIds.forEach((id) => {
-                  options.infoTemplates[id] = { infoTemplate: template };
-                });
-              }
+              // // Populate the options and then add the layerObj
+              // options.id = layerObj.id;
+              // options.visible = layerObj.visible || false;
+              // options.opacity = layerObj.opacity || 1.0;
+              // //- Add a popup template if configuration is present
+              // if (layerObj.popup && layerObj.layerIds) {
+              //   options.infoTemplates = {};
+              //   const template = layerUtils.makeInfoTemplate(layerObj.popup, 'en');
+              //   layerObj.layerIds.forEach((id) => {
+              //     options.infoTemplates[id] = { infoTemplate: template };
+              //   });
+              // }
 
-              layer.url = layerObj.url;
+              // //layer.url = layerObj.url;
+              // layer.url = shortTermServices[`${fireID}48HR`].url;
 
 
-              const esriLayer = new DynamicLayer(layer.url, options);
-              // const esriLayer = layerFactory(layer, context.langggg);
+              // const esriLayer = new DynamicLayer(layer.url, options);
+              // // const esriLayer = layerFactory(layer, context.langggg);
 
-              esriLayer.legendLayer = layerObj.legendLayer || null;
-              esriLayer.layerIds = layerObj.layerIds;
-              esriLayer.order = layerObj.order;
-              esriLayer.label = layerObj.label;
+              // esriLayer.legendLayer = layerObj.legendLayer || null;
+              // esriLayer.layerIds = layerObj.layerIds;
+              // esriLayer.order = layerObj.order;
+              // esriLayer.label = layerObj.label;
 
-              brApp.map.removeLayer(firesLayer);
+              // brApp.map.removeLayer(firesLayer);
 
-              brApp.map.addLayer(esriLayer);
+              // brApp.map.addLayer(esriLayer);
 
-              console.log('esriLayer', esriLayer);
+              // console.log('esriLayer', esriLayer);
 
               break;
             case '2': //past 72 hours
