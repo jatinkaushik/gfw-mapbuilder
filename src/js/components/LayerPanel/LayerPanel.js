@@ -169,7 +169,7 @@ export default class LayerPanel extends Component {
     const {language} = this.context;
     let childComponent, editCallback, dynamicSublabel, layerLoading;
     
-
+    
     // Set child component based on layer id
     switch (layer.id) {
       case 'VIIRS_ACTIVE_FIRES':
