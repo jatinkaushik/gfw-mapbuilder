@@ -1,5 +1,4 @@
 //@ts-ignore
-
 const CompressionPlugin = require('compression-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -25,8 +24,7 @@ module.exports = env => {
       index: ['./src/js/lib.tsx']
     },
     output: {
-      filename: 'library-bundle.js',
-      publicPath: ''
+      filename: 'library-bundle.js'
     },
     module: {
       rules: [
@@ -96,7 +94,7 @@ module.exports = env => {
       new HtmlWebPackPlugin({
         title: 'ArcGIS Template Application',
         template: './src/library.html',
-        filename: './library.html',
+        filename: './index.html',
         favicon: './src/assets/favicon.ico',
         chunksSortMode: 'none',
         inlineSource: '.(css)$',
