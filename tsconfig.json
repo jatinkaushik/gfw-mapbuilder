@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "module": "amd",
+    "module": "esnext",
     "baseUrl": ".",
     "paths": {
       "js/*": ["src/js/*"],
       "css/*": ["src/css/*"],
       "images/*": ["src/images/*"]
     },
-    "lib": ["dom", "es2015.promise", "es5", "es6"],
-    "target": "es5",
+    "lib": ["dom", "es2015.promise", "esnext"],
+    "target": "es6",
     "allowJs": true,
     "strict": true,
     "noImplicitAny": true,
